@@ -832,6 +832,10 @@ footer a:hover{
     #product1 .pro{
         width: 100%;
     }
+    #banner h2{
+        font-size: 25px;
+        line-height: 27px;
+    }
     #sm-banner .banner-box{
         height: 40vh;
     }
