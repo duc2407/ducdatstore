@@ -814,6 +814,14 @@ footer a:hover{
         overflow: hidden;
         background-image: url("../img/anhnen3.jpg");
     }
+    #hero h1{
+        font-size: 35px;
+        line-height: 36px;
+    }
+    #hero h2{
+        font-size: 40px;
+        line-height: 40px;
+    }
     #feature{
         justify-content: space-around;
     }
