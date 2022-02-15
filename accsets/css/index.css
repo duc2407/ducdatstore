@@ -541,6 +541,12 @@ footer .install .row img{
 footer .install img{
     margin: 10px 0 15px 0;
 }
+.ios{
+    height: 56px;
+}
+.baybanking{
+    width: 20%;
+}
 footer .follow i:hover,
 footer a:hover{
     color: #088178;
@@ -799,6 +805,9 @@ footer a:hover{
     #product1 .pro-container .pro:nth-child(8){
         display: none;
     }
+    .ios{
+        height: 52px;
+    }
 }
 @media (max-width:477px) {
     .section-p1{
@@ -851,7 +860,12 @@ footer a:hover{
     #banner3{
         padding: 0 20px;
     }
-    
+    .ios{
+        height: 36.2px;
+    }
+    .baybanking{
+        width: 40%;
+    }
     /*
     #banner3 .banner-box{
         width: 100%;
