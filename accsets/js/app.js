@@ -12,9 +12,17 @@ if (close){
         nav.classList.remove('active');
     })
 }
-const login =  document.getElementById('login');
-if(login){
+function checkLogin(){
+    var textLg =  document.getElementById('login').value;
+    if( textLg ==="nguyenduc123az321@gmail.com"){
+        window.location.href="login.html";
+    } else{
+        confirm('Email này chưa được đăng kí trong hệ thống!');
+    }
+
+} 
+/*if(login){
     login.addEventListener('click',()=> {
         alert('Đăng nhập không thành công! Email này chưa được đăng kí trong hệ thống!')
     })
-}
+}*/
