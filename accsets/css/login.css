@@ -1,0 +1,32 @@
+@media (max-width:799px) {
+    #feature .fe-box:nth-child(3){
+        display:block;
+    }
+    #feature .fe-box:nth-child(4){
+        display:block;
+    }
+    #feature .fe-box:nth-child(5){
+        display:block;
+    }
+    #feature .fe-box:nth-child(6){
+        display:block;
+    }
+    #product1 .pro-container .pro:nth-child(3){
+        display:block;
+    }
+    #product1 .pro-container .pro:nth-child(5){
+        display:block;
+    }
+    #product1 .pro-container .pro:nth-child(6){
+        display:block;
+    }
+    #product1 .pro-container .pro:nth-child(7){
+        display:block;
+    }
+    #product1 .pro-container .pro:nth-child(8){
+        display:block;
+    }
+    #MyClockDisplay{
+        display:none;
+    }
+}

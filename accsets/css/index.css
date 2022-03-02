@@ -183,6 +183,11 @@ body{
 #hero p{
     color:#fddde4;
 }
+#MyClockDisplay{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
 /*#hero button{
     /*background-image: url("../img/anh2.jpg");
     background: #fddde4;
@@ -812,6 +817,9 @@ footer a:hover{
 @media (max-width:477px) {
     .section-p1{
         padding:20px;
+    }
+    #MyClockDisplay{
+        font-size: 30px
     }
     #header{
         padding: 20px 30px;
