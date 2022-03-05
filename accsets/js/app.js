@@ -23,6 +23,7 @@ function checkLogin(){
         confirm('Email này chưa được đăng kí trong hệ thống!');
     }
 }
+
 function showTime(){
     var date = new Date();
     var h = date.getHours(); // 0 - 23
@@ -34,7 +35,7 @@ function showTime(){
         h = 12;
     }
     
-    if(h > 12){
+    if(h >= 11){
         h = h - 12;
         session = "PM";
     }
@@ -50,8 +51,78 @@ function showTime(){
     setTimeout(showTime, 1000);
     
 }
-
 showTime();
+
+//cart
+const btn = document.querySelectorAll('.btn-cart');
+btn.forEach(function(button, index){
+    button.addEventListener("click", function(event){
+        var btnItem = event.target;
+        var product = btnItem.parentElement.parentElement;
+        var productImg = product.querySelector("img").src;
+        var productName = product.querySelector('.des h5').innerText;
+        var productPrice = product.querySelector('.des h4').innerText;
+        addcart(productImg,productName,productPrice);
+    })
+});
+
+const btnclick = document.getElementById('lg-bag');
+btnclick.addEventListener("click", function(event){
+    const boxcart = document.querySelector('.boxcart');
+    if (boxcart.style.display=='none'){
+        boxcart.style="display: block;";
+    } else {
+        boxcart.style="display: none;";
+    }
+})
+/*------- Thêm sản phẩm vào giỏ hàng---------- */
+function addcart(productImg,productName,productPrice){
+    var addtr = document.createElement('tr');
+    var cartItem = document.querySelectorAll('table tbody tr');
+    for(var i=0; i<cartItem.length;i++){
+        var productT = document.querySelectorAll('.title');
+        if(productT[i].innerHTML==productName){
+            alert('Không thể vì sản phẩm này đã có trong giỏ hàng.');
+            return;
+        }
+
+    }
+    var trcontent =
+    `<tr>
+        <td><img src="${productImg}" alt=""></td>
+        <td class='title'>${productName}</td>
+        <td>${productPrice}</td>
+        <td>Xóa</td>
+    </tr>`;
+    addtr.innerHTML = trcontent;
+    var carttable = document.querySelector('table tbody');
+    carttable.append(addtr); //thêm thẻ tr vào dưới cùng của thẻ tbody được gán = carttbale
+    alert('Đã thêm vào giỏ hàng');
+    cartsum();
+}
+
+/*-------Tổng tiền thanh toán---------- */
+function cartsum(){
+    var sumCart = 0;
+    var cartItem = document.querySelectorAll('table tbody tr');
+    for (var i =0; i<cartItem.length;i++){
+        var productPrice = cartItem[i].querySelector('tr td:nth-child(3)').innerHTML;
+        const b = parseFloat(productPrice);
+        total = b * 1000000; 
+        sumCart += total;
+        sumprice = sumCart.toLocaleString('de-DE'); // dấu chấm sau số 0
+    }
+    var getSumcart = document.querySelector('.SumPrice p span');
+    getSumcart.innerHTML = sumprice;
+}
+
+
+
+
+
+
+
+
 /*
 var active = document.querySelector('.trangchu');
 active.classList.remove('active');

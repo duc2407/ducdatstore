@@ -1,3 +1,17 @@
+.SumPrice{
+    display: flex;
+}
+.btn_cart{
+    background-color: #0881797e;
+    font-size: 15px;
+    margin-left: 11%;
+    padding: 10px 26px;
+    font-weight: 600;
+}
+.btn_cart:hover{
+    background-color: #fddde4;
+    cursor: pointer;
+}
 @media (max-width:799px) {
     #feature .fe-box:nth-child(3){
         display:block;
