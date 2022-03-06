@@ -96,13 +96,14 @@ function addcart(productImg,productName,productPrice){
         <td><img src="${productImg}" alt=""></td>
         <td class='title'>${productName}</td>
         <td>${productPrice}</td>
-        <td>Xóa</td>
+        <td class="delete">Xóa</td>
     </tr>`;
     addtr.innerHTML = trcontent;
     var carttable = document.querySelector('table tbody');
     carttable.append(addtr); //thêm thẻ tr vào dưới cùng của thẻ tbody được gán = carttbale
     alert('Đã thêm vào giỏ hàng');
     cartsum();
+    deleteCart();
 }
 
 /*-------Tổng tiền thanh toán---------- */
@@ -114,12 +115,25 @@ function cartsum(){
         const b = parseFloat(productPrice);
         total = b * 1000000; 
         sumCart += total;
-        sumprice = sumCart.toLocaleString(); // dấu chấm sau số 0
+        /*sumprice = sumCart.toLocaleString(); // dấu chấm sau số 0*/
     }
     var getSumcart = document.querySelector('.SumPrice p span');
-    getSumcart.innerHTML = sumprice;
+    getSumcart.innerHTML = sumCart.toLocaleString();
 }
-
+/*-------------delete cart---------*/
+function deleteCart(){
+    var cartItem = document.querySelectorAll('table tbody tr');
+    for(var i=0; i<cartItem.length;i++){
+        var productT = document.querySelectorAll('.delete');
+        productT[i].addEventListener("click", function(event){
+            var cartDelete = event.target;
+            var cartim = cartDelete.parentElement
+            cartim.remove();
+            cartsum();
+        })
+        
+    }
+}
 
 /*
 var abc="1.234.145";
