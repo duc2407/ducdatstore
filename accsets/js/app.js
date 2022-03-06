@@ -35,7 +35,7 @@ function showTime(){
         h = 12;
     }
     
-    if(h >= 11){
+    if(h == 12){
         h = h - 12;
         session = "PM";
     }
@@ -70,8 +70,12 @@ const btnclick = document.getElementById('lg-bag');
 btnclick.addEventListener("click", function(event){
     const boxcart = document.querySelector('.boxcart');
     if (boxcart.style.display=='none'){
+        btnclick.style.color="#088178";
+        btnclick.style.borderBottom="2px solid #088178";
         boxcart.style="display: block;";
     } else {
+        btnclick.style.borderBottom="none";
+        btnclick.style.color="#000";
         boxcart.style="display: none;";
     }
 })
@@ -110,11 +114,29 @@ function cartsum(){
         const b = parseFloat(productPrice);
         total = b * 1000000; 
         sumCart += total;
-        sumprice = sumCart.toLocaleString('de-DE'); // dấu chấm sau số 0
+        sumprice = sumCart.toLocaleString(); // dấu chấm sau số 0
     }
     var getSumcart = document.querySelector('.SumPrice p span');
     getSumcart.innerHTML = sumprice;
 }
+
+
+/*
+var abc="1.234.145";
+var neu ="Thật là ngu ngốc";
+for(var i = 0; i<abc.length; i++){
+    var x = abc.split('.').join(''); //thay . thanh ''
+    var y = Number(x); // string qua number
+    var z = y.toLocaleString(); //thêm chấm
+    var a = neu.replace('Thật là','Đức');
+}
+console.log(a);
+console.log(y);
+console.log(z);
+
+*/
+
+
 
 
 

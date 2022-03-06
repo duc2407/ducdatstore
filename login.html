@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
+    <link rel="icon" href="./accsets/img/NMD.jpg" type="image/x-icon"/>
     <link rel="stylesheet" href="./accsets/css/index.css">
     <link rel="stylesheet" href="./accsets/css/login.css">
     
@@ -19,32 +20,46 @@
         <div>
             <ul id="navbar">
                 <li><a class="active" href="#">Sản phẩm</a></li>
-                <li><a href="#product1">Giỏ hàng</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
                 <li><a href="#lienhe">Trợ giúp</a></li>
-                <li><a href="index.html">Đăng xuất</a></li>
+                <li id="user"><a href="index.html">Đăng xuất</a></li>
+                <div class="user">
+                    <div class="user-name">
+                        <div class="img-user"><img class="img-users" src="./accsets/img/NMD.jpg" alt=""></div>
+                        <p>Nguyễn Minh Đức</p>
+                    </div>
+                    <div class="map">
+                        <p>Vị trí: khách hàng</p>
+                        <p>Số dư ví: 4.120.000 vnd</p>
+                        <p>Thay đổi thông tin</p>
+                    </div>
+                </div>
                 <li id="lg-bag"><i class="fas fa-shopping-bag"></i></li>
                 <div class="boxcart">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Sản Phẩm</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Giá tiền</th>
-                                <th>Chọn</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <!--   <tr>
-                                <td><img src="./accsets/img/anh1.jpg" alt=""></td>
-                                <td>Vans</td>
-                                <td>100.000</td>
-                                <td>Xóa</td>
-                            </tr> -->
-                        </tbody>
-                    </table>
+                    <div class="box-croll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sản Phẩm</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá tiền</th>
+                                    <th>Chọn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <!--   <tr>
+                                    <td><img src="./accsets/img/anh1.jpg" alt=""></td>
+                                    <td>Vans</td>
+                                    <td>100.000</td>
+                                    <td>Xóa</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+
+                    </div>
                     <div class="SumPrice">
                         <p>Thành Tiền: <span>0</span> VND</p>
-                        <button class="btn_cart">Thanh Toán</button>
+                        <button class="btn_cart"><a href="cart.html">Thanh Toán</a></button>
                     </div>
                 </div>
                 <i id="close" class="fas fa-times"></i>
